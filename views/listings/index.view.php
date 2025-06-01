@@ -1,10 +1,5 @@
-<?php
-// require '../helpers.php';//←不要　改めて宣言できませんのエラー（？）
-// require basePath('views/partials/head.php');
-?>
 <?= loadPartial('head'); ?>
 <?= loadPartial('navbar'); ?>
-<?= loadPartial('showcase-serch'); ?>
 <?= loadPartial('top-banner'); ?>
 
 
@@ -192,10 +187,6 @@
         </div>
       </div>
     </div>
-    <a href="/listings" class="block text-xl text-center">
-      <i class="fa fa-arrow-alt-circle-right"></i>
-      Show All Jobs
-    </a>
   </section>
 
 <?= loadPartial('bottom-banner'); ?>
