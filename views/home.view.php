@@ -2,10 +2,10 @@
 // require '../helpers.php';//←不要　改めて宣言できませんのエラー（？）
 // require basePath('views/partials/head.php');
 ?>
-<?= loadPartial('head'); ?>
-<?= loadPartial('navbar'); ?>
-<?= loadPartial('showcase-serch'); ?>
-<?= loadPartial('top-banner'); ?>
+<?= loadPartial('head')?>
+<?= loadPartial('navbar')?>
+<?= loadPartial('showcase-serch')?>
+<?= loadPartial('top-banner')?>
 
 
 <!-- Job Listings -->
@@ -198,5 +198,5 @@
     </a>
   </section>
 
-<?= loadPartial('bottom-banner'); ?>
-<?= loadPartial('footer'); ?>
+<?= loadPartial('bottom-banner')?>
+<?= loadPartial('footer')?>

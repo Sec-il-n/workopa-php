@@ -1,6 +1,6 @@
-<?= loadPartial('head'); ?>
-<?= loadPartial('navbar'); ?>
-<?= loadPartial('top-banner'); ?>
+<?= loadPartial('head')?>
+<?= loadPartial('navbar')?>
+<?= loadPartial('top-banner')?>
 
 
 <!-- Job Listings -->
@@ -189,5 +189,5 @@
     </div>
   </section>
 
-<?= loadPartial('bottom-banner'); ?>
-<?= loadPartial('footer'); ?>
+<?= loadPartial('bottom-banner')?>
+<?= loadPartial('footer')?>

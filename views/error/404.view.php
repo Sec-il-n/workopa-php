@@ -1,7 +1,7 @@
-<?= loadPartial('head'); ?>
-<?= loadPartial('navbar'); ?>
-<?= loadPartial('showcase-serch'); ?>
-<?= loadPartial('top-banner'); ?>
+<?= loadPartial('head') ?>
+<?= loadPartial('navbar') ?>
+<?= loadPartial('showcase-serch') ?>
+<?= loadPartial('top-banner') ?>
 
     <section>
       <div class="container mx-auto p-4 mt-4">
@@ -12,5 +12,5 @@
       </div>
     </section>
 
-<?= loadPartial('bottom-banner'); ?>
-<?= loadPartial('footer'); ?>
+<?= loadPartial('bottom-banner');?>
+<?= loadPartial('footer')?>
