@@ -11,6 +11,14 @@
 class Router {
     protected $routes = [];
 
+    /**
+     * Add a new route
+     *
+     * @param string $method
+     * @param string $uri
+     * @param string $contoroller
+     * @return void
+     */
     public function registerRoute($method, $uri, $contoroller){
             $this->routes[] = [
             'method' => $method,
@@ -90,4 +98,6 @@ class Router {
         // loadView('error/404');
         // exit;
     }
+
+   
 }
