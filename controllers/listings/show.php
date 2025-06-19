@@ -7,10 +7,13 @@ $params = [
     'id' => $id
 ];
 // $listings = $db->query('SELECT * FROM listings WHERE id =' . $id)->fetch();//not FetchAll coz it's a 1 recode
-$listings = $db->query('SELECT * FROM listings WHERE id = :id', $params)->fetch();
-loadView('listings/show');
-?>
+$listing = $db->query('SELECT * FROM listings WHERE id = :id', $params)->fetch();
+// inspect($listing);
 
+loadView('listings/show', [
+    'listing' => $listing
+]);
+?>
 
 
 
