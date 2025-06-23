@@ -8,6 +8,7 @@
 //     http_response_code(404);
 //     require(basePath($routes['404']));
 // }
+namespace Framework;
 class Router {
     protected $routes = [];
 
