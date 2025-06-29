@@ -9,6 +9,8 @@
 //     require(basePath($routes['404']));
 // }
 namespace Framework;
+use App\controllers\ErrorController;
+
 class Router {
     protected $routes = [];
 
@@ -78,11 +80,11 @@ class Router {
      * @param int $httpCode
      * @return void
      */
-    public function error($httpCode = 404){
-        http_response_code($httpCode);
-        loadView("error/{$httpCode}");
-        exit;
-    }
+    // public function error($httpCode = 404){
+    //     http_response_code($httpCode);
+    //     loadView("error/{$httpCode}");
+    //     exit;
+    // }
 
      
     /**
@@ -109,10 +111,8 @@ class Router {
                 return;
             }          
         }
-        $this->error();
-        // http_response_code(404);
-        // loadView('error/404');
-        // exit;
+        // $this->error();
+        ErrorController::notFound();
     }
 
    
