@@ -21,11 +21,11 @@ require basePath('routes.php');
 // Get current URI and HttpMethod
 // $uri = $_SERVER['REQUEST_URI'];
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-// inspectAndDie($uri);
-$method = $_SERVER['REQUEST_METHOD'];
-// inspect($uri);
-// inspect($method);
+// $method = $_SERVER['REQUEST_METHOD'];
+//←（？）のち、削除編集の際hiddenファイルとマッチさせる必要がある場合に役立つ（Router.phpに移動）
+
 
 // route the request
-$router->route($uri,$method);
+// $router->route($uri,$method);
+$router->route($uri);
 ?>

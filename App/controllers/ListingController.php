@@ -12,6 +12,11 @@ class ListingController {
         $this->db = new Database($config);
     }
 
+    /**
+     *  all listingsshow
+     *
+     * @return void
+     */
     public function index(){
        $listings = $this->db->query('SELECT * FROM listings')->fetchAll();
         loadView('listings/index', [
@@ -19,18 +24,35 @@ class ListingController {
         ]);
     }
 
+    /**
+     * show the create listing form
+     *
+     * @return void
+     */
     public function create () {
         loadView('listings/create');
     }
 
-    public function show () {
-        $id = $_GET['id'] ?? '';
+    /**
+     * show a single listing
+     *
+     * @return void
+     */
+    // public function show () {
+    public function show ($params) {
+        // $id = $_GET['id'] ?? '';
+        $id = $params['id'] ?? '';
         $params = [
             'id' => $id
         ];
 
         $listing = $this->db->query('SELECT * FROM listings WHERE id = :id', $params)->fetch();
 
+        // Check if listing exisits
+        if (!$listing) {
+            ErrorController::notFound('Listing not found.');
+            return;
+        }
         loadView('listings/show', [
             'listing' => $listing
         ]);
