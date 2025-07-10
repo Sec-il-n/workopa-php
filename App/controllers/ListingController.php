@@ -2,6 +2,8 @@
 namespace App\Controllers;
 // PSR-4(auto roader)＝Controllerをequireしなくてもよい
 use Framework\Database;
+use Framework\Validation;
+
 
 class ListingController {
     protected $db;
@@ -18,7 +20,9 @@ class ListingController {
      * @return void
      */
     public function index(){
-       $listings = $this->db->query('SELECT * FROM listings')->fetchAll();
+        // inspectAndDie(Validation::email('44@ttt.com'));
+
+        $listings = $this->db->query('SELECT * FROM listings')->fetchAll();
         loadView('listings/index', [
             'listings' => $listings
         ]);
