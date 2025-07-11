@@ -16,3 +16,5 @@ $router->get('/listings/create','ListingController@create');
 // $router->get('/listing','controllers/listings/show.php');
 $router->get('/listing/{id}','ListingController@show');
 
+$router->post('/listings','ListingController@store');
+
